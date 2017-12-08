@@ -8,23 +8,25 @@
 
 # pprint позволяет в понятном для человека виде форматировать 'сложные' структуры данных 
 import pprint
+import json
 
-filename = ''
+filename = 'data.json'
 
 try:
 
     with open(filename, encoding='utf-8') as data_file:
-        
-        data = #использовать модуль json и метод для считывания данных: (data_file)
+        json_file = open('data.json', 'r')
+        fl = json_file.read()
+        data = json.loads(fl)
 
-except ________:
+except FileExistsError:
 
     print("Файл не найден! Файл должен называться: {}".format(filename))
     
     status = 'Файл не найден'
 
 
-pprint(data)
+pprint.pprint(data)
 
 # Вывести в форматированном виде поля: 
 
