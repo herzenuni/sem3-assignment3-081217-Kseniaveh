@@ -32,7 +32,7 @@ pprint.pprint(data)
 
 # company, email, phone, address
 
-for ind, i in enumerate(data):
+for i in enumerate(data):
 	dict = {}
 	dict.update(
 		{'company':i.get('company'),
