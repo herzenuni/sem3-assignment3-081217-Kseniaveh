@@ -31,3 +31,13 @@ pprint.pprint(data)
 # Вывести в форматированном виде поля: 
 
 # company, email, phone, address
+
+for ind, i in enumerate(data):
+	dict = {}
+	dict.update(
+		{'company':i.get('company'),
+		 'email':i.get('email'),
+		 'phone':i.get('phone'),
+		 'address':i.get('address')})
+
+	pprint.pprint(dict)
